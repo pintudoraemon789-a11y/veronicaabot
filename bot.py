@@ -20,7 +20,7 @@ media_data = {}
 # Handler upload foto
 @bot.message_handler(content_types=['photo'])
 def handle_photo(message):
-    file_id = message.photo[-5].file_id
+    file_id = message.photo[-1].file_id
     unique_code = str(uuid.uuid4())[:8]
     bot_link = f"https://t.me/veronicaabot?start={unique_code}"
 
@@ -87,3 +87,4 @@ def start_handler(message):
 
 print("🤖 Bot sedang berjalan...")
 bot.infinity_polling()
+
