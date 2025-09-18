@@ -7,7 +7,7 @@ import telebot
 # Load token
 load_dotenv("token.env.txt")
 BOT_TOKEN = os.getenv("BOT_TOKEN")
-BOT_USERNAME = os.getenv("BOT_USERNAME")  # username bot kamu, tanpa @
+BOT_USERNAME = os.getenv("veronicaabot")  # username bot kamu, tanpa @
 
 if not BOT_TOKEN:
     raise ValueError("BOT_TOKEN tidak ditemukan!")
@@ -87,4 +87,5 @@ def start_handler(message):
 
 print("🤖 Bot sedang berjalan...")
 bot.infinity_polling()
+
 
